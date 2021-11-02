@@ -1,0 +1,21 @@
+nums=[2,1,4,5,6,0]
+
+nmin=[10 for i in range(3)]
+for i in range (len(nums)):
+    
+    if (nums[i]<nmin[0]):
+        nmin=nmin[1:]+[nums[i]]
+        nmin.sort()
+        nmin=nmin[::-1]
+    
+print (nmin[0])
+  
+
+n=[0 for i in range(3)]
+for i in range (len(nums)):
+    
+    if (nums[i]>n[-1]):
+        n=n[1:]+[nums[i]]
+        n.sort()
+    
+print (n[0]) 
